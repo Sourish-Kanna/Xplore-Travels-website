@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Welcome to GST Travels</title>
+        <link rel="stylesheet" href="/static/css/tags.css">
+        <link rel="icon" href="/static/favicon.ico">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    </head>
+
+    <body>
+        <div class="header">
+            <section class="title">
+                <h1>Welcome to GST Travels</h1>
+            </section>
+            <div class="navbar">
+                <ul>
+                    <li><a onclick="navbar('home')">Home</a></li>
+                    <li><a onclick="navbar('about')">About</a></li>
+                    <li><a onclick="navbar('login')">Login</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <h2>Off You Go!!!</h2>
+        <div id="data" data-value="{{tag}}"></div>
+        <script src="/static/scripts/tag.js"></script>
+    </body>
+
+</html>
