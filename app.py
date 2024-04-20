@@ -1,6 +1,6 @@
 from flask import request, Flask, render_template
 import webbrowser 
-import json 
+import json
 import dbms
 
 app = Flask(__name__)

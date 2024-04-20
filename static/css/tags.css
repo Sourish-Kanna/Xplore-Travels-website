@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&family=Poppins:wght@400;500;600&display=swap');
 body {
     text-align: center;
     padding: 20px;
@@ -20,9 +21,10 @@ h2 {
 }
 
 button:hover {
-    transform: scale(1.1);
+    transform: scale(1.25);
+    font-size: 1.75em;
+    outline: 2.5px solid white;
     box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
-    background: (rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
 }
 
 .button {
@@ -35,8 +37,9 @@ button:hover {
     border-radius: 150px;
     color: white;
     transition: all 200ms cubic-bezier(0.4, 0, 1, 1);
-    font-size: 1.25em;
+    font-size: 1.5em;
     border: none;
+    font-family: 'Botthanie', 'Gineva', 'Jeumpa', cursive;
     background: rgb(0, 0, 0);
 }
 
