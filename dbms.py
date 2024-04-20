@@ -72,9 +72,7 @@ def gettags():
 def getcitys(tag):
     conn = sqlite3.connect("static/GST Travels.db")
     cur = conn.cursor() 
-    cur.execute(f"select tid from tag where tag='{tag}'")
-    tid = cur.fetchone()[0]
-    cur.execute(f"select city from city where cid in (select cid from find where tid='{tid}');")
+    cur.execute(f"SELECT city.city FROM city JOIN find ON city.cid = find.cid JOIN tag ON find.tid = tag.tid WHERE tag.tag = '{tag}';")
     value = []
     lis = cur.fetchall()
     val = len(lis)
