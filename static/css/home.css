@@ -148,13 +148,15 @@ header .logo {
 .social li a {
     display: inline-block;
     margin-right: 20px;
-    filter: invert(1);
-    transform: scale(0.5);
+    /* filter: invert(1); */
+    transform: scale(1.5);
     transition: 0.5s;
+    padding-right: 20px;
+    color: white;
 }
 
 .social li a:hover {
-    transform: scale(0.5) translateY(-15px);
+    transform: scale(1.5) translateY(-10px);
 }
 
 .menu {

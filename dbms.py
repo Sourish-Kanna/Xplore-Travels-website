@@ -6,9 +6,9 @@ def create():
     cur.execute("CREATE TABLE IF NOT EXISTS city( cid char(3) primary key, city varchar(50) );")
     cur.execute("CREATE TABLE IF NOT EXISTS tag( tid char(3) primary key, tag varchar(50) );")
     cur.execute("CREATE TABLE IF NOT EXISTS find( cid char(3) REFERENCES city(cid), tid char(3) REFERENCES tag(tid));")
-    cur.execute("""CREATE TABLE IF NOT EXISTS destination(cid char(3) REFERENCES city(cid),Budget int,SightSeeing varchar(50),byroad varchar(50),
-                byrail varchar(50),byair varchar(50),Hotels5star varchar(50),Hotels3star varchar(50),Hotels1star varchar(50),
-                Restaurents5star varchar(50),Restaurents3star varchar(50),Restaurents1star varchar(50),NearbySights varchar(50));""")
+    cur.execute("""CREATE TABLE IF NOT EXISTS destination(cid char(3) REFERENCES city(cid),Budget int,SightSeeing varchar(200),byroad varchar(200),
+                byrail varchar(200),byair varchar(200),Hotels5star varchar(200),Hotels3star varchar(200),Hotels1star varchar(200),
+                Restaurents5star varchar(200),Restaurents3star varchar(200),Restaurents1star varchar(200),NearbySights varchar(200));""")
     conn.commit()
     conn.close()
 
@@ -30,30 +30,6 @@ def insert_preset():
                 ('C07',"T03"),('C08',"T03"),('C09',"T03"),('C10',"T04"),('C11',"T04"),('C12',"T04"),('C06',"T05"),('C04',"T05"),('C13',"T05"),
                 ('C14',"T06"),('C15',"T06"),('C09',"T06"),('C05',"T07"),('C01',"T07"),('C16',"T07"),('C07',"T08"),('C08',"T08"),('C18',"T08"),
                 ('C19',"T09"),('C10',"T09"),('C20',"T09"),('C06',"T10"),('C21',"T10"),('C07',"T10"),('C08',"T11"),('C22',"T11"),('C17',"T11");""")
-    conn.commit()
-    conn.close()
-
-def insert_tag(tup):
-    conn = sqlite3.connect("static/GST Travels.db")
-    cur = conn.cursor() 
-    tid,tag = tup
-    cur.execute(f"INSERT INTO tag VALUES('{tid}','{tag}');")
-    conn.commit()
-    conn.close()
-
-def insert_city(tup):
-    conn = sqlite3.connect("static/GST Travels.db")
-    cur = conn.cursor() 
-    cid,city = tup
-    cur.execute(f"INSERT INTO city VALUES('{cid}','{city}');")
-    conn.commit()
-    conn.close()
-
-def insert_find(tup):
-    conn = sqlite3.connect("static/GST Travels.db")
-    cur = conn.cursor() 
-    cid,tid = tup
-    cur.execute(f"INSERT INTO find VALUES('{cid}','{tid}');")
     conn.commit()
     conn.close()
 

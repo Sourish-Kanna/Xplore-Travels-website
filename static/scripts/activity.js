@@ -1,5 +1,5 @@
 function places(city) {
-    window.location.href = `/`;
+    window.location.href = `/city/${city}`;
 }
 
 var data_string = document.getElementById('data').getAttribute('data-value');
@@ -12,7 +12,7 @@ for (let i = 0; i < data_tuple.length; i++) {
     btn1.setAttribute('onclick', `places('${data_tuple[i]}')`);
     btn1.innerHTML = `${data_tuple[i]}`;
     document.body.appendChild(btn1);
-    console.log(`${data_tuple[i].split(" ")[0]}`)
+    // console.log(`${data_tuple[i].split(" ")[0]}`)
 }
 
 const images = document.querySelectorAll('button');

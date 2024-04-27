@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>City - {{city}}</title>
+        <link rel="icon" href="/static/favicon.ico">
+        <link rel="stylesheet" href="/static/css/city.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    </head>
+
+    <body>
+        <h1>{{city}} Travel Guide</h1>
+        <div class="slideshow-container" id="slideshow" , data-value="{{city_slide}}"></div>
+
+        <div>
+            <div class="flyout-menu">
+                <i class="fa fa-road"></i>
+                <b>How to Reach {{city}}</b>
+                <div class="content-menu">
+                    <ul>
+                        <li><strong>By Air:</strong> Mumbai has two airports, an international airport known as Chhatrapati Shivaji
+                            Maharaj and a domestic airport.</li>
+                        <li><strong>By Rail:</strong> Mumbai Central is the main railway station in Mumbai which is connected to major
+                            Indian cities.</li>
+                        <li><strong>By Road:</strong> Mumbai is connected via uninterrupted highways that lead to easy accessibility
+                            from the rest of the country.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="flyout-menu">
+                <i class="fa fa-hotel"></i>
+                <b>Hotels in {{city}}</b>
+                <div class="content-menu">
+                    <ul>
+                        <li><strong>5-Star:</strong> The St. Regis Mumbai, Taj Lands End, Mumbai</li>
+                        <li><strong>3-Star:</strong> Hotel XYZ (Replace with actual data)</li>
+                        <li><strong>1-Star:</strong> Hotel ABC (Replace with actual data)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="flyout-menu">
+                <i class="fa fa-cutlery"></i>
+                <b>Restaurants in {{city}}</b>
+                <div class="content-menu">
+                    <ul>
+                        <li><strong>5-Star:</strong> San-Qi at Four Seasons Mumbai, Golden Dragon at the Taj Mahal Palace</li>
+                        <li><strong>3-Star:</strong> Restaurant XYZ (Replace with actual data)</li>
+                        <li><strong>1-Star:</strong> Restaurant ABC (Replace with actual data)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="flyout-menu">
+                <i class="fa fa-camera"></i>
+                <b>Sightseeing Places in {{city}}</b>
+                <div class="content-menu">
+                    <ul>
+                        <li>Gateway of India</li>
+                        <li>Marine Drive</li>
+                        <li>Elephanta Caves</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="flyout-menu">
+                <i class="fa fa-compass"></i>
+                <b>Places to Visit Near {{city}}</b>
+                <div class="content-menu">
+                    <ul>
+                        <li>Lonavala</li>
+                        <li>Matheran</li>
+                        <li>Alibag</li>
+                        <li>Mahabaleshwar</li>
+                        <li>Lavasa</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+        <br><br>
+
+        <div id="data" data-value="{{city_detail}}"></div>
+        <script src="/static/scripts/city.js"></script>
+
+    </body>
+
+</html>
