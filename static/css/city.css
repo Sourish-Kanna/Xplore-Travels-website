@@ -19,6 +19,10 @@ img {
     height: auto;
 }
 
+ul {
+    list-style-type: none;
+}
+
 .slideshow-container {
     /* max-width: 1000px; */
     position: relative;
@@ -68,4 +72,22 @@ img {
 .flyout-menu:hover .content {
     opacity: 1;
     max-height: max-content;
+}
+
+.back {
+    display: inline;
+    font-size: 1em;
+    background: #0093e9b0;
+    padding: 10px 30px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 500;
+    margin-top: 10px;
+    color: #111;
+    letter-spacing: 2px;
+    transition: 0.2s;
+}
+
+.back:hover {
+    letter-spacing: 6px;
 }

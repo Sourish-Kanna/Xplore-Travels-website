@@ -16,11 +16,11 @@ def tag():
     data = json.dumps(value)
     return render_template(template_name_or_list="tag.html",tag=data)
 
-@app.route('/tag/<city>')
-def city_select(city):
-    value = dbms.getcitys(city)
+@app.route('/tag/<tag_id>')
+def city_select(tag_id):
+    value = dbms.getcitys(tag_id)
     data = json.dumps(value)
-    return render_template("activity.html",tag=data)
+    return render_template("activity.html",tag=data, t_name=tag_id)
 
 @app.route('/city/<city>')
 def display_city(city):
@@ -28,7 +28,7 @@ def display_city(city):
     data1 = json.dumps(value1)
     value = dbms.getcitys(city)
     data = json.dumps(value)
-    return render_template("city.html", city_slide=data1, city=city, city_detail=data)
+    return render_template("city.html", city_slide=data1, city=city.split()[0], city_detail=data)
 
 @app.route("/<click>")
 def other(click):
