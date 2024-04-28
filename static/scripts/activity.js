@@ -21,3 +21,9 @@ images.forEach((image) => {
     document.getElementById(image.id).style.background =
         `linear-gradient( rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 1)), url('/static/tags/${image.id}.jpg')`
 });
+
+var aBack = document.createElement('a');
+aBack.className = 'back';
+aBack.href = '/tag';
+aBack.innerHTML = 'Back';
+document.body.appendChild(aBack);

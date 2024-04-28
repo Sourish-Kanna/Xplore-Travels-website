@@ -10,6 +10,11 @@ for (let i = 0; i < data_tuple.length; i++) {
     // console.log(`${data_tuple[i].split(" ")[0]}`);
 }
 
+var aBack = document.createElement('a');
+aBack.className = 'back';
+aBack.href = '/tag';
+aBack.innerHTML = 'Back';
+document.body.appendChild(aBack);
 
 var slideIndex = 0;
 showSlides();

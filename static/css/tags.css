@@ -78,13 +78,14 @@ button:hover {
 .back{
     display: inline;
     font-size: 1em;
-    background: #0093e9b0;
+    background: #0094e9;
     padding: 10px 30px;
     text-transform: uppercase;
     text-decoration: none;
     font-weight: 500;
-    margin-top: 10px;
-    color: #111;
+    margin: 10px;
+    color: #000;
+    border-radius: 50px;
     letter-spacing: 2px;
     transition: 0.2s;
 }
