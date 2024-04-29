@@ -2,6 +2,7 @@ from flask import request, Flask, render_template
 import webbrowser 
 import json
 import dbms
+import re
 
 app = Flask(__name__)
 
@@ -24,11 +25,12 @@ def city_select(tag_id):
 
 @app.route('/city/<city>')
 def display_city(city):
-    value1 = ("Rishikesh2","Kerala2","Kanha4","bangalore5")
+    value1 = [city+str(x) for x in range(1,5)]
     data1 = json.dumps(value1)
-    value = dbms.getcitys(city)
+    value=dbms.get_destination_info(city)
     data = json.dumps(value)
-    return render_template("city.html", city_slide=data1, city=city.split()[0], city_detail=data)
+    c_name = re.sub(r'\(.*?\)', '', city).strip()
+    return render_template("city.html", city_slide=data1, city=c_name, city_detail=data)
 
 @app.route("/<click>")
 def other(click):
