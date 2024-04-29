@@ -1,5 +1,6 @@
 var slideshow = document.getElementById('slideshow').getAttribute('data-value');
 var data_tuple = JSON.parse(slideshow);
+// console.log(data_tuple)
 for (let i = 0; i < data_tuple.length; i++) {
     var div = document.createElement("div");
     div.className = "mySlides";

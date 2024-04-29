@@ -17,7 +17,7 @@ for (let i = 0; i < data_tuple.length; i++) {
 
 const images = document.querySelectorAll('button');
 images.forEach((image) => {
-    console.log(`'/static/activity/${image.id}.jpg'`)
+    // console.log(`/static/activity/${image.id}.jpg`)
     document.getElementById(image.id).style.background =
         `linear-gradient( rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 1)), url('/static/activity/${image.id}.jpg')`
 });

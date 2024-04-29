@@ -25,11 +25,11 @@ def city_select(tag_id):
 
 @app.route('/city/<city>')
 def display_city(city):
-    value1 = [city+str(x) for x in range(1,5)]
-    data1 = json.dumps(value1)
     value=dbms.get_destination_info(city)
     data = json.dumps(value)
     c_name = re.sub(r'\(.*?\)', '', city).strip()
+    value1 = [city.split()[0]+str(x) for x in range(1,5)]
+    data1 = json.dumps(value1)
     return render_template("city.html", city_slide=data1, city=c_name, city_detail=data)
 
 @app.route("/<click>")

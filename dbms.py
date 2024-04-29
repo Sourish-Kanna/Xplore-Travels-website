@@ -52,7 +52,9 @@ def insert_preset():
                 ('C01', 5000, 'dudhsagar falls', 'mumbai expressway highway', 'madgoan express', 'dabolim airport', 'taj exotica resort', 'acron waterfront resort', 'the business hotel', 'gunpowder', 'fisherman wharf', 'souza lobo', 'panaji'),
                 ('C03', 5000, 'ross island', 'not feasible', 'not feasible', 'veer savarkar international airport', 'taj exotica resort', 'sea shell resort', 'haywizz', 'new lighthouse restaurant', 'icy spicy', 'anju coco', 'Havelock island'),
                 ('C21', 5000, 'lalbagh botanical garden', 'national highways', 'bengaluru railway station', 'kempegowda international airport', 'the leela palace', 'taj MG road', 'treebo trend edge', 'karavalli', 'MTR mavalli', 'koshy''s resto', 'mysore'),
-                ('C06', 5000, 'pangong lake', 'srinagar and manali highways', 'not feasible', 'kushok bakula rimpochee airport', 'the grand dragon ladakh', 'hotel ladakh palace', 'hotel asia', 'tibetan kitchen', 'gesmo resto', 'bon appetit', 'none due to remote location');
+                ('C06', 5000, 'pangong lake', 'srinagar and manali highways', 'not feasible', 'kushok bakula rimpochee airport', 'the grand dragon ladakh', 'hotel ladakh palace', 'hotel asia', 'tibetan kitchen', 'gesmo resto', 'bon appetit', 'none due to remote location'),
+                ('C04', 6000, 'Solang Valley', 'Chandigarh and Shimla National Highway', 'Joginder Railway Station', 'Bhuntar Airport', 'The Himalayan Resort', 'Hotel Snow Park', 'Manali Heights', 'Johnson''s Cafe and Restaurant', 'Chopsticks Resto', 'Cafe 1947', 'Kullu'),
+                ('C07', 6000, 'Hawa Mahal and Amber Fort', 'Udaipur National Highways', 'Jaipur Junction', 'Jaipur International Airport', 'The Rambagh Palace', 'Hotel Pearl Palace', 'Hotel Ratnawali', 'Suvarna Mahal', 'Laxmi Misthan Bhandar', 'Peacock Rooftop Restaurant', 'Agra');
                 """)
     conn.commit()
     conn.close()
