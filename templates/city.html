@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>City - {{city}}</title>
+        <link rel="icon" href="/static/favicon.ico">
+        <link rel="stylesheet" href="/static/css/city.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    </head>
+
+    <body>
+        <h1>{{city}} Travel Guide</h1>
+        <div class="slideshow-container" id="slideshow" , data-value="{{city_slide}}"></div>
+        <br>
+
+        <div id="data" data-value="{{city_detail}}"></div>
+        <script src="/static/scripts/city.js"></script>
+    </body>
+
+</html>

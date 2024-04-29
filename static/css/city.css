@@ -1,0 +1,94 @@
+body {
+    text-align: center;
+    padding: 20px;
+    font-family: Poppins, Arial, Helvetica, sans-serif;
+    margin: 0;
+    color: white;
+    font-size: 1.5em;
+    background-color: #0093E9;
+    background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+}
+
+h1 {
+    font-size: 2.5em;
+    text-transform: uppercase;
+}
+
+img {
+    width: 750px;
+    height: auto;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.slideshow-container {
+    /* max-width: 1000px; */
+    position: relative;
+    margin: auto;
+}
+
+.mySlides {
+    display: none;
+}
+
+.content-menu {
+    margin: 0.1em;
+    padding-top: 0.1em;
+    padding-bottom: 0.1em;
+    border: 0.05em solid #ddd;
+    background-color: #f1f1f1;
+    color: black;
+}
+
+.flyout-menu {
+    padding: 1em;
+    text-transform: uppercase;
+    position: relative;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out;
+    max-height: 0;
+    cursor: pointer;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+.content {
+    background-color: #fff;
+    color: #333;
+    position: relative;
+    width: 100%;
+    transition: opacity 0.5s ease-in-out;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+}
+
+.flyout-menu:hover {
+    max-height: max-content;
+}
+
+.flyout-menu:hover .content {
+    opacity: 1;
+    max-height: max-content;
+}
+
+.back {
+    display: inline;
+    font-size: 1em;
+    background: #0093e9b0;
+    padding: 10px 30px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 500;
+    margin-top: 10px;
+    color: #000;
+    border-radius: 50px;
+    letter-spacing: 2px;
+    transition: 0.2s;
+}
+
+.back:hover {
+    letter-spacing: 6px;
+}

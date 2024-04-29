@@ -1,5 +1,5 @@
 function places(city) {
-    window.location.href = `/`;
+    window.location.href = `/city/${city}`;
 }
 
 var data_string = document.getElementById('data').getAttribute('data-value');
@@ -12,12 +12,18 @@ for (let i = 0; i < data_tuple.length; i++) {
     btn1.setAttribute('onclick', `places('${data_tuple[i]}')`);
     btn1.innerHTML = `${data_tuple[i]}`;
     document.body.appendChild(btn1);
-    console.log(`${data_tuple[i].split(" ")[0]}`)
+    // console.log(`${data_tuple[i].split(" ")[0]}`)
 }
 
 const images = document.querySelectorAll('button');
 images.forEach((image) => {
-    // console.log(`'/static/cities/${image.id}.jpg'`)
+    // console.log(`/static/activity/${image.id}.jpg`)
     document.getElementById(image.id).style.background =
-        `linear-gradient( rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 1)), url('/static/tags/${image.id}.jpg')`
+        `linear-gradient( rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 1)), url('/static/activity/${image.id}.jpg')`
 });
+
+var aBack = document.createElement('a');
+aBack.className = 'back';
+aBack.href = '/tag';
+aBack.innerHTML = 'Home';
+document.body.appendChild(aBack);

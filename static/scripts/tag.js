@@ -3,7 +3,7 @@ function tags(category) {
 }
 
 function navbar(click) {
-    console.log(click)
+    // console.log(click)
     window.location.href = `/${click}`;
 }
 
