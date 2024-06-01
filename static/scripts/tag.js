@@ -3,13 +3,11 @@ function tags(category) {
 }
 
 function navbar(click) {
-    // console.log(click)
     window.location.href = `/${click}`;
 }
 
 var data_string = document.getElementById('data').getAttribute('data-value');
 var data_tuple = JSON.parse(data_string);
-// console.log(data_tuple);
 
 for (let i = 0; i < data_tuple.length; i++) {
     var btn1 = document.createElement("button");
@@ -22,7 +20,7 @@ for (let i = 0; i < data_tuple.length; i++) {
 
 const images = document.querySelectorAll('button');
 images.forEach((image) => {
-    // console.log(`'/static/tags/${image.id}.jpg'`)
+    // console.log(`'/static/tags/${image.id.toLowerCase()}.jpg'`)
     document.getElementById(image.id).style.background =
-        `linear-gradient( rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 1)), url('/static/tags/${image.id}.jpg')`
+        `linear-gradient( rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 1)), url('/static/tags/${image.id.toLowerCase()}.jpg')`
 });

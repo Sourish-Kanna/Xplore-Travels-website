@@ -1,4 +1,4 @@
-from flask import request, Flask, render_template
+from flask import Flask, render_template
 import webbrowser 
 import json
 import dbms
