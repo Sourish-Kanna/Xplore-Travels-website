@@ -1,4 +1,5 @@
 from flask import Flask, render_template
+import webbrowser 
 import json
 import dbms
 import re
@@ -36,6 +37,5 @@ def other(click):
     return render_template(template_name_or_list=f"{click}.html")
 
 if __name__ == '__main__':  
-   import webbrowser
    webbrowser.open("http://127.0.0.1:5000/")
    app.run()
