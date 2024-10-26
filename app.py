@@ -1,4 +1,5 @@
 from flask import Flask, render_template
+from urllib.parse import unquote
 import webbrowser 
 import json
 import dbms
@@ -19,12 +20,14 @@ def tag():
 
 @app.route('/tag/<tag_id>')
 def city_select(tag_id):
+    tag_id = unquote(tag_id)
     value = dbms.getcitys(tag_id)
     data = json.dumps(value)
     return render_template("activity.html",tag=data, t_name=tag_id)
 
 @app.route('/city/<city>')
 def display_city(city):
+    city = unquote(city)
     value=dbms.get_destination_info(city)
     data = json.dumps(value)
     c_name = re.sub(r'\(.*?\)', '', city).strip()
@@ -34,7 +37,7 @@ def display_city(city):
 
 @app.route("/<click>")
 def other(click):
-    return render_template(template_name_or_list=f"{click}.html")
+    return render_template(template_name_or_list=f"{unquote(click)}.html")
 
 if __name__ == '__main__':  
    webbrowser.open("http://127.0.0.1:5000/")
