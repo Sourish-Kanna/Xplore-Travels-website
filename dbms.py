@@ -74,7 +74,7 @@ def gettags():
 def getcitys(tag):
     conn = sqlite3.connect("static/GST Travels.db")
     cur = conn.cursor() 
-    cur.execute(f"SELECT city.city FROM city JOIN find ON city.cid = find.cid JOIN tag ON find.tid = tag.tid WHERE tag.tag = '{tag}';")
+    cur.execute("SELECT city.city FROM city JOIN find ON city.cid = find.cid JOIN tag ON find.tid = tag.tid WHERE tag.tag = ?", (tag,))
     value = []
     lis = cur.fetchall()
     val = len(lis)
@@ -90,9 +90,9 @@ def prestart():
 def get_destination_info(city_name):
     conn = sqlite3.connect("static/GST Travels.db")
     cursor = conn.cursor()
-    cursor.execute(f"SELECT cid FROM city WHERE city ='{city_name}'")
+    cursor.execute("SELECT cid FROM city WHERE city = ?", (city_name,))
     city_id = cursor.fetchone()
-    cursor.execute(f"SELECT * FROM DESTINATION WHERE cid='{city_id[0]}'")
+    cursor.execute("SELECT * FROM DESTINATION WHERE cid = ?", (city_id[0],))
     data = cursor.fetchone()
     city = re.sub(r'\(.*?\)', '', city_name).strip()
     info = {
