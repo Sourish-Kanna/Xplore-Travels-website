@@ -24,17 +24,17 @@ for (var key in data) {
     iElement.className = 'fa fa-' + icons[j++];
     divFlyoutMenu.appendChild(iElement);
     var bElement = document.createElement('b');
-    bElement.innerHTML = ' ' + key.charAt(0).toUpperCase() + key.slice(1);
+    bElement.textContent = ' ' + key.charAt(0).toUpperCase() + key.slice(1);
     divFlyoutMenu.appendChild(bElement);
     var divContentMenu = document.createElement('div');
     divContentMenu.className = 'content-menu';
     if (typeof data[key] === 'object') {
         for (var key1 in data[key]) {
             var bElement = document.createElement('b');
-            bElement.innerHTML = key1.charAt(0).toUpperCase() + key1.slice(1) + ': ';
+            bElement.textContent = key1.charAt(0).toUpperCase() + key1.slice(1) + ': ';
             var ulElement = document.createElement('ul');
             var liElement = document.createElement('li');
-            liElement.innerHTML = data[key][key1];
+            liElement.textContent = data[key][key1];
             ulElement.appendChild(bElement);
             ulElement.appendChild(liElement);
             divContentMenu.appendChild(ulElement);
@@ -47,7 +47,7 @@ for (var key in data) {
         var sights = data[key].split(', ');
         for (var i = 0; i < sights.length; i++) {
             var liElement = document.createElement('li');
-            liElement.innerHTML = sights[i];
+            liElement.textContent = sights[i];
             ulElement.appendChild(liElement);
         }
         divContentMenu.appendChild(ulElement);
@@ -62,7 +62,7 @@ document.body.appendChild(divFlyout);
 var aBack = document.createElement('a');
 aBack.className = 'back';
 aBack.href = '/tag';
-aBack.innerHTML = 'Home';
+aBack.textContent = 'Home';
 document.body.appendChild(aBack);
 
 var slideIndex = 0;
