@@ -10,7 +10,7 @@ for (let i = 0; i < data_tuple.length; i++) {
     btn1.className = "button";
     btn1.id = `${data_tuple[i].split(" ")[0]}`
     btn1.setAttribute('onclick', `places('${data_tuple[i]}')`);
-    btn1.innerHTML = `${data_tuple[i]}`;
+    btn1.textContent = `${data_tuple[i]}`;
     document.body.appendChild(btn1);
 }
 
