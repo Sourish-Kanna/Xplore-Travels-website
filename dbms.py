@@ -2,7 +2,7 @@ import sqlite3
 import re
 
 def create():
-    conn = sqlite3.connect("static/GST Travels.db")
+    conn = sqlite3.connect("./static/GST Travels.db")
     cur = conn.cursor() 
     cur.execute("CREATE TABLE IF NOT EXISTS city( cid char(3) primary key, city varchar(50) );")
     cur.execute("CREATE TABLE IF NOT EXISTS tag( tid char(3) primary key, tag varchar(50) );")
@@ -14,7 +14,7 @@ def create():
     conn.close()
 
 def insert_preset():
-    conn = sqlite3.connect("static/GST Travels.db")
+    conn = sqlite3.connect("./static/GST Travels.db")
     cur = conn.cursor() 
     cur.execute("""INSERT INTO tag VALUES('T01',"Beach Holidays"),('T02',"Adventure Tour"),('T03',"Cultural Experience"),
                 ('T04',"Wildlife Safaries"),('T05',"Mountain Expeditions"),('T06',"Urban Exploration"),('T07',"Wellness Retreats"),
@@ -60,7 +60,7 @@ def insert_preset():
     conn.close()
 
 def gettags():
-    conn = sqlite3.connect("static/GST Travels.db")
+    conn = sqlite3.connect("./static/GST Travels.db")
     cur = conn.cursor() 
     cur.execute("select tag from tag")
     value = []
@@ -72,7 +72,7 @@ def gettags():
     return tuple(value)
 
 def getcitys(tag):
-    conn = sqlite3.connect("static/GST Travels.db")
+    conn = sqlite3.connect("./static/GST Travels.db")
     cur = conn.cursor() 
     cur.execute("SELECT city.city FROM city JOIN find ON city.cid = find.cid JOIN tag ON find.tid = tag.tid WHERE tag.tag = ?", (tag,))
     value = []
@@ -88,7 +88,7 @@ def prestart():
     insert_preset()
 
 def get_destination_info(city_name):
-    conn = sqlite3.connect("static/GST Travels.db")
+    conn = sqlite3.connect("./static/GST Travels.db")
     cursor = conn.cursor()
     cursor.execute("SELECT cid FROM city WHERE city = ?", (city_name,))
     city_id = cursor.fetchone()
@@ -118,7 +118,7 @@ def get_destination_info(city_name):
     return info
 
 try:
-    conn = sqlite3.connect("static/GST Travels.db")
+    conn = sqlite3.connect("./static/GST Travels.db")
     cur = conn.cursor() 
     cur.execute("select tag from tag")
     conn.close()
@@ -126,7 +126,7 @@ except sqlite3.OperationalError:
     prestart()
 
 if __name__ == "__main__":
-    conn = sqlite3.connect("static/GST Travels.db")
+    conn = sqlite3.connect("./static/GST Travels.db")
     cur = conn.cursor() 
     for i in cur.execute("select * from city").fetchall():
         print(i[1])
