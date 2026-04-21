@@ -44,6 +44,12 @@ ul {
     border: 0.05em solid #ddd;
     background-color: #f1f1f1;
     color: black;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.content-menu:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.18);
 }
 
 .flyout-menu {
@@ -125,10 +131,22 @@ ul {
 
     .flyout-menu {
         padding: 0.75em;
+        max-height: none;
+        overflow: visible;
+    }
+
+    .content {
+        opacity: 1;
+        max-height: none;
+        overflow: visible;
     }
 
     .content-menu {
         font-size: 0.9em;
+        padding-top: 0.4em;
+        padding-bottom: 0.4em;
+        line-height: 1.4;
+        overflow-wrap: anywhere;
     }
 
     .back {
