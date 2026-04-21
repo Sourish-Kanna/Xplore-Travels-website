@@ -43,3 +43,46 @@ ul {
 .back:hover {
   letter-spacing: 6px;
 }
+
+@media (max-width: 991px) {
+  body {
+    font-size: 1.25em;
+    padding: 16px;
+  }
+
+  h1 {
+    font-size: 2em;
+  }
+
+  p {
+    font-size: 1.25em;
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    font-size: 1em;
+    padding: 12px;
+  }
+
+  h1 {
+    font-size: 1.5em;
+  }
+
+  h2 {
+    font-size: 1.1em;
+  }
+
+  h3 {
+    font-size: 1em;
+  }
+
+  ul {
+    padding-left: 0;
+  }
+
+  .back {
+    font-size: 0.9em;
+    padding: 8px 20px;
+  }
+}

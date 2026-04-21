@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&family=Poppins:wght@400;500;600&display=swap');
+
 body {
     text-align: center;
     padding: 20px;
@@ -41,6 +42,9 @@ button:hover {
     border: none;
     font-family: 'Botthanie', 'Gineva', 'Jeumpa', cursive;
     background: rgb(0, 0, 0);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .header {
@@ -72,10 +76,10 @@ button:hover {
     text-decoration: none;
     color: white;
     font-size: 1em;
-    cursor: pointer;    
+    cursor: pointer;
 }
 
-.back{
+.back {
     display: inline;
     font-size: 1em;
     background: #0094e9;
@@ -92,4 +96,71 @@ button:hover {
 
 .back:hover {
     letter-spacing: 6px;
+}
+
+@media (max-width: 991px) {
+    body {
+        font-size: 1.25em;
+        padding: 16px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    .button {
+        width: min(90vw, 420px);
+        height: 210px;
+        font-size: 1.25em;
+    }
+
+    .header {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 600px) {
+    body {
+        font-size: 1em;
+        padding: 12px;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    h2 {
+        font-size: 1.25em;
+    }
+
+    .button {
+        width: min(92vw, 340px);
+        height: 180px;
+        border-radius: 100px;
+        font-size: 1.1em;
+        line-height: 80px;
+    }
+
+    button:hover {
+        font-size: 1.2em;
+    }
+
+    .navbar {
+        text-align: center;
+    }
+
+    .navbar ul li {
+        margin-left: 6px;
+        margin-right: 6px;
+    }
+
+    .back {
+        font-size: 0.9em;
+        padding: 8px 20px;
+    }
 }
